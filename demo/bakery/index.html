@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아침의숲 베이커리 — 베이커리 홈페이지 예시 | 재재컴퍼니</title>
+<meta name="description" content="재재컴퍼니가 만든 베이커리·카페 업종 홈페이지 예시입니다. 실제 업체가 아닙니다.">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="../../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="preload" as="image" href="../img/bake1.webp">
+<link rel="stylesheet" href="../demo.css">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--bg:#F6F0E6;--ink:#2B2118;--crust:#9A5B2C;--soft:#E9DDCB;--muted:#7A6A5A}
+.serif{font-family:'Gowun Batang',serif}
+header{position:absolute;left:0;right:0;z-index:20;color:#FFF8EE}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{font-family:'Gowun Batang',serif;font-size:22px;font-weight:700;letter-spacing:-.02em;text-decoration:none}
+.logo small{display:block;font-family:Pretendard;font-size:10px;letter-spacing:.35em;opacity:.8;font-weight:500}
+.nav nav a{text-decoration:none;font-size:14px;margin-left:26px;opacity:.85}
+.hero{position:relative;height:min(92vh,860px);min-height:560px;overflow:hidden;color:#FFF8EE;display:flex;align-items:flex-end}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,12,6,.45) 0%,rgba(20,12,6,.1) 40%,rgba(20,12,6,.75) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:80px;width:100%}
+.hero p.k{font-size:13px;letter-spacing:.3em;opacity:.85}
+.hero h1{font-family:'Gowun Batang',serif;font-size:clamp(38px,6.4vw,78px);line-height:1.18;margin-top:16px;font-weight:700;letter-spacing:-.02em}
+.hero .s{margin-top:18px;font-size:clamp(15px,1.6vw,18px);max-width:520px;opacity:.9}
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;background:#FFF8EE;color:var(--ink);text-decoration:none;font-weight:700;font-size:15px;margin-top:30px;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.dark{background:var(--ink);color:#FFF8EE}
+section{padding:110px 0}
+.eyebrow{font-size:12px;letter-spacing:.32em;color:var(--crust);font-weight:700}
+h2{font-family:'Gowun Batang',serif;font-size:clamp(28px,4vw,46px);line-height:1.25;margin-top:14px;letter-spacing:-.02em}
+.lead{color:var(--muted);margin-top:14px;max-width:560px;font-size:16.5px}
+.marq{background:var(--ink);color:var(--soft);padding:18px 0;font-family:'Gowun Batang',serif;font-size:20px}
+.marq b{color:#E7B677;font-weight:400}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:54px}
+.item figure{aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:var(--soft)}
+.item img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.item:hover img{transform:scale(1.06)}
+.item h3{font-family:'Gowun Batang',serif;font-size:21px;margin-top:18px;display:flex;justify-content:space-between;align-items:baseline}
+.item h3 span{font-family:Pretendard;font-size:15px;color:var(--crust);font-weight:700}
+.item p{color:var(--muted);font-size:14.5px;margin-top:6px}
+.tag{display:inline-block;font-size:11.5px;border:1px solid var(--crust);color:var(--crust);border-radius:99px;padding:2px 9px;margin-top:10px}
+.story{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.story .ph{aspect-ratio:5/4;overflow:hidden;border-radius:4px}
+.story .ph img{width:100%;height:100%;object-fit:cover}
+.story blockquote{font-family:'Gowun Batang',serif;font-size:clamp(20px,2.2vw,26px);line-height:1.6;margin-top:24px}
+.story .sign{margin-top:20px;color:var(--muted);font-size:14px}
+.time{background:var(--soft)}
+.tl{display:grid;grid-template-columns:repeat(5,1fr);margin-top:56px;border-top:1px solid #CDBBA2}
+.tl div{padding:24px 18px 0 0;position:relative}
+.tl div::before{content:"";position:absolute;top:-6px;left:0;width:11px;height:11px;border-radius:50%;background:var(--crust)}
+.tl b{font-family:'Gowun Batang',serif;font-size:28px;display:block}
+.tl span{font-size:14.5px;color:var(--muted)}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.visit dl{display:grid;grid-template-columns:88px 1fr;row-gap:16px;margin-top:34px;font-size:15.5px}
+.visit dt{color:var(--muted)}
+.visit .map{aspect-ratio:4/3;border-radius:4px;background:repeating-linear-gradient(45deg,#E9DDCB 0 12px,#E3D5C0 12px 24px);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px}
+footer{background:var(--ink);color:#BCAE9C;padding:44px 0;font-size:13px}
+footer b{font-family:'Gowun Batang',serif;color:#FFF8EE;font-size:18px;display:block;margin-bottom:8px}
+@media(max-width:860px){.menu{grid-template-columns:1fr 1fr}.story,.visit{grid-template-columns:1fr;gap:40px}.tl{grid-template-columns:1fr 1fr;row-gap:28px}.nav nav{display:none}section{padding:80px 0}}
+@media(max-width:520px){.menu{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="demo-bar">재재컴퍼니가 만든 <b>베이커리 홈페이지 예시</b>입니다 · 실제 업체가 아닙니다<a href="../../#contact">이런 홈페이지 만들기 →</a></div>
+<header><div class="wrap nav">
+  <a class="logo" href="#">아침의숲<small>BAKERY</small></a>
+  <nav><a href="#menu">오늘의 빵</a><a href="#story">이야기</a><a href="#time">굽는 시간</a><a href="#visit">오시는 길</a></nav>
+</div></header>
+
+<div class="hero">
+  <img class="kb" src="../img/bake1.webp" width="1600" height="1065" alt="통밀과 씨앗을 올린 시골빵">
+  <div class="wrap">
+    <p class="k rv">SINCE THE FIRST OVEN</p>
+    <h1 class="rv d1">새벽 4시,<br>오븐에 불이 켜집니다</h1>
+    <p class="s rv d2">48시간 저온 숙성 반죽으로 매일 아침 구워내는 동네 빵집. 그날 구운 빵은 그날만 팝니다.</p>
+    <a class="btn rv d3" href="#menu">오늘의 빵 보기</a>
+  </div>
+</div>
+
+<div class="marq" aria-hidden="true"><div><span>천연 발효종</span><b>✦</b><span>프랑스산 밀가루</span><b>✦</b><span>매일 아침 7시 오픈</span><b>✦</b><span>당일 생산 당일 판매</span><b>✦</b><span>천연 발효종</span><b>✦</b><span>프랑스산 밀가루</span><b>✦</b><span>매일 아침 7시 오픈</span><b>✦</b><span>당일 생산 당일 판매</span><b>✦</b></div><div><span>천연 발효종</span><b>✦</b><span>프랑스산 밀가루</span><b>✦</b><span>매일 아침 7시 오픈</span><b>✦</b><span>당일 생산 당일 판매</span><b>✦</b><span>천연 발효종</span><b>✦</b><span>프랑스산 밀가루</span><b>✦</b><span>매일 아침 7시 오픈</span><b>✦</b><span>당일 생산 당일 판매</span><b>✦</b></div></div>
+
+<section id="menu"><div class="wrap">
+  <p class="eyebrow rv">TODAY'S BREAD</p>
+  <h2 class="rv d1">오늘 아침 구운 빵</h2>
+  <p class="lead rv d2">계절과 밀의 상태에 따라 메뉴가 조금씩 바뀝니다. 오후엔 품절되는 빵이 많아요.</p>
+  <div class="menu">
+    <article class="item rv"><figure><img src="../img/bake2.webp" width="800" height="1200" loading="lazy" alt="겉이 바삭한 캄파뉴"></figure><h3>캄파뉴 <span>7,800</span></h3><p>호밀과 통밀을 섞어 구수하고 속이 촉촉한 식사빵.</p><span class="tag">대표 메뉴</span></article>
+    <article class="item rv d1"><figure><img src="../img/bake3.webp" width="800" height="1200" loading="lazy" alt="얇게 썬 바게트"></figure><h3>트래디션 바게트 <span>4,500</span></h3><p>밀가루, 물, 소금, 효모만으로. 껍질이 노래하는 바게트.</p><span class="tag">하루 3번 굽기</span></article>
+    <article class="item rv d2"><figure><img src="../img/bake4.webp" width="1000" height="563" loading="lazy" alt="바구니에 담긴 여러 가지 빵" style="height:100%"></figure><h3>아침 빵 바구니 <span>15,000</span></h3><p>그날 가장 잘 나온 빵 다섯 가지를 골라 담아드립니다.</p><span class="tag">선물 추천</span></article>
+  </div>
+</div></section>
+
+<section id="story" style="padding-top:0"><div class="wrap story">
+  <div class="ph rv"><img src="../img/bake5.webp" width="1000" height="579" loading="lazy" alt="나무 테이블 위의 빵과 밀 이삭"></div>
+  <div>
+    <p class="eyebrow rv">OUR STORY</p>
+    <h2 class="rv d1">빵이 맛있으려면<br>기다려야 합니다</h2>
+    <blockquote class="rv d2">“반죽을 서두르면 빵이 먼저 압니다. 그래서 우리는 이틀 전에 내일의 빵을 준비합니다.”</blockquote>
+    <p class="sign rv d3">— 아침의숲 제빵실</p>
+  </div>
+</div></section>
+
+<section id="time" class="time"><div class="wrap">
+  <p class="eyebrow rv">BAKING TIME</p>
+  <h2 class="rv d1">갓 나온 빵을 원하신다면</h2>
+  <div class="tl">
+    <div class="rv"><b>07:00</b><span>문 여는 시간 · 크루아상, 식사빵</span></div>
+    <div class="rv d1"><b>09:30</b><span>바게트 첫 판</span></div>
+    <div class="rv d2"><b>12:00</b><span>샌드위치 · 포카치아</span></div>
+    <div class="rv d3"><b>15:00</b><span>바게트 두 번째 판 · 구움과자</span></div>
+    <div class="rv d4"><b>17:30</b><span>마지막 바게트 · 소진 시 마감</span></div>
+  </div>
+</div></section>
+
+<section id="visit"><div class="wrap visit">
+  <div>
+    <p class="eyebrow rv">VISIT</p>
+    <h2 class="rv d1">오시는 길</h2>
+    <dl class="rv d2">
+      <dt>주소</dt><dd>대구 OO구 OO로 00, 1층</dd>
+      <dt>영업</dt><dd>매일 07:00 – 19:00 (월요일 휴무)</dd>
+      <dt>전화</dt><dd>053-000-0000</dd>
+      <dt>주차</dt><dd>건물 뒤 2대 · 30분 무료</dd>
+    </dl>
+    <a class="btn dark rv d3" href="#">케이크 예약 문의</a>
+  </div>
+  <div class="map rv d2">지도 영역 (실제 제작 시 네이버·카카오 지도 연결)</div>
+</div></section>
+
+<footer><div class="wrap"><b>아침의숲 베이커리</b>대구 OO구 OO로 00 · 053-000-0000 · 이 페이지는 재재컴퍼니가 만든 예시이며 실제 업체가 아닙니다.</div></footer>
+<script src="../demo.js"></script>
+</body>
+</html>

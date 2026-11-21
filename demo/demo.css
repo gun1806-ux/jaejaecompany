@@ -1,0 +1,31 @@
+/* 재재컴퍼니 업종별 데모 공통 — 각 페이지는 :root 변수와 자체 스타일로 분위기를 바꾼다 */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Pretendard Variable',Pretendard,-apple-system,'Malgun Gothic',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;word-break:keep-all}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+/* 데모 안내 띠 */
+.demo-bar{position:relative;z-index:60;background:#111;color:#E9E7E1;font-size:12.5px;text-align:center;padding:8px 14px;letter-spacing:-.01em}
+.demo-bar a{color:#FFC53D;font-weight:700;text-decoration:none;margin-left:6px;white-space:nowrap}
+
+/* 스크롤 등장 — JS가 있을 때만 숨겼다가 보여줌 (JS 없어도 본문은 보임) */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}.js .rv.d3{transition-delay:.3s}.js .rv.d4{transition-delay:.4s}
+
+/* 사진 천천히 확대 */
+@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
+.kb{animation:kb 9s cubic-bezier(.2,.6,.2,1) both}
+
+/* 흐르는 글자 띠 */
+.marq{overflow:hidden;white-space:nowrap}
+.marq>div{display:inline-flex;gap:48px;padding-right:48px;animation:mq 30s linear infinite}
+@keyframes mq{to{transform:translateX(-100%)}}
+
+@media(prefers-reduced-motion:reduce){
+  .js .rv{opacity:1;transform:none;transition:none}
+  .kb,.marq>div{animation:none}
+  html{scroll-behavior:auto}
+}

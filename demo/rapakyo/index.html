@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>라팍요 — 서비스 소개 페이지 예시 | 재재컴퍼니</title>
+<meta name="description" content="재재컴퍼니가 만든 라팍요(야구장 좌석 배달·픽업 주문) 서비스 소개 페이지 예시입니다.">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="../../assets/favicon.ico">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="preload" as="image" href="../img/ball1.webp">
+<link rel="stylesheet" href="../demo.css">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--bg:#F4F6FA;--ink:#0A2550;--blue:#0B57C2;--sky:#2D7BF0;--gold:#FFC629;--red:#E8423A;--muted:#5A6A85;--line:#E1E7F1}
+.hero{position:relative;overflow:hidden;background:var(--ink);color:#fff;min-height:calc(100vh - 34px);display:flex;align-items:center}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.38}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,37,80,.96) 30%,rgba(10,37,80,.35))}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;width:100%;padding:70px 24px}
+.hero .logo{width:min(300px,62vw)}
+.pill{display:inline-block;background:var(--gold);color:var(--ink);font-weight:800;font-size:13px;padding:6px 14px;border-radius:99px;margin-top:26px}
+.hero h1{font-size:clamp(36px,5.6vw,70px);line-height:1.15;letter-spacing:-.045em;margin-top:16px;font-weight:900}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{margin-top:18px;color:#C7D5EE;font-size:17px;max-width:470px}
+.btns{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:16px 26px;border-radius:14px;font-weight:800;text-decoration:none;font-size:15.5px;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.y{background:var(--gold);color:var(--ink)}.btn.w{background:rgba(255,255,255,.12);color:#fff}
+.phone{justify-self:center;width:min(300px,72vw);aspect-ratio:9/19;border-radius:44px;background:#0b0f18;padding:11px;box-shadow:0 40px 90px rgba(0,0,0,.5),0 0 0 2px rgba(255,255,255,.08) inset;position:relative}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:34px}
+@media(prefers-reduced-motion:no-preference){.phone{animation:fl 5s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-12px)}}}
+section{padding:100px 0}
+.eyebrow{color:var(--blue);font-weight:800;font-size:13px;letter-spacing:.08em}
+h2{font-size:clamp(28px,4vw,46px);letter-spacing:-.045em;line-height:1.22;margin-top:10px;font-weight:900}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px;counter-reset:s}
+.steps article{background:#fff;border:1px solid var(--line);border-radius:22px;padding:32px 28px;position:relative;overflow:hidden}
+.steps article::before{counter-increment:s;content:counter(s);position:absolute;right:20px;top:4px;font-size:110px;font-weight:900;color:#EEF3FB;line-height:1}
+.steps .ic{width:52px;height:52px;border-radius:16px;background:var(--blue);display:grid;place-items:center;position:relative}
+.steps .ic svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.steps h3{font-size:21px;margin-top:20px;position:relative}
+.steps p{color:var(--muted);margin-top:6px;font-size:15px;position:relative}
+.opt{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:46px}
+.opt div{border-radius:24px;padding:38px 32px}
+.opt .a{background:var(--blue);color:#fff}.opt .b{background:#fff;border:1px solid var(--line)}
+.opt b{font-size:15px;opacity:.85}
+.opt strong{display:block;font-size:clamp(34px,4.5vw,52px);letter-spacing:-.04em;margin-top:8px;font-weight:900}
+.opt p{margin-top:8px;opacity:.85}
+.free{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.free span{background:#fff;border:1px solid var(--line);border-radius:99px;padding:9px 16px;font-weight:700;font-size:14px;color:var(--ink)}
+.free span i{font-style:normal;color:var(--red);margin-right:4px}
+.shop{background:var(--ink);color:#fff;border-radius:28px;padding:56px clamp(26px,5vw,60px);display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.shop h2{color:#fff}
+.shop ul{list-style:none;margin-top:20px;color:#C7D5EE}
+.shop li{padding:8px 0 8px 22px;position:relative}
+.shop li::before{content:"";position:absolute;left:0;top:16px;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.shop .ph{border-radius:20px;overflow:hidden;aspect-ratio:4/3}
+.shop .ph img{width:100%;height:100%;object-fit:cover}
+footer{padding:40px 0;color:var(--muted);font-size:13px}
+@media(max-width:900px){.hero .wrap,.shop{grid-template-columns:1fr}.steps,.opt{grid-template-columns:1fr}section{padding:80px 0}}
+</style>
+</head>
+<body>
+<div class="demo-bar">재재컴퍼니가 만든 <b>라팍요 서비스 소개 페이지 예시</b>입니다<a href="../../#contact">이런 페이지 만들기 →</a></div>
+
+<div class="hero">
+  <img class="kb" src="../img/ball1.webp" width="1600" height="1067" alt="관중이 가득한 야구장">
+  <div class="wrap">
+    <div>
+      <img class="logo rv" src="../img/rapakyo-logo-white.svg" width="700" height="380" alt="라팍요">
+      <span class="pill rv d1">대구삼성라이온즈파크 좌석 주문</span>
+      <h1 class="rv d1">줄 서지 말고,<br><em>좌석에서</em> 주문하세요</h1>
+      <p class="rv d2">좌석 QR만 찍으면 끝. 앱 설치도 회원가입도 없이, 구장 안 맛집 음식을 내 자리까지 가져다드려요.</p>
+      <div class="btns rv d3"><a class="btn y" href="https://rapakyo.web.app/" target="_blank" rel="noopener">라팍요 주문하러 가기</a><a class="btn w" href="#how">이용 방법</a></div>
+    </div>
+    <div class="phone rv d2"><img src="../img/rapakyo-app.webp" width="480" height="1013" alt="라팍요 주문 화면"></div>
+  </div>
+</div>
+
+<section id="how"><div class="wrap">
+  <p class="eyebrow rv">HOW IT WORKS</p>
+  <h2 class="rv d1">경기 한 장면도 놓치지 않게<br>딱 세 번이면 주문 끝</h2>
+  <div class="steps">
+    <article class="rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v7M14 20h3"/></svg></div><h3>좌석 QR 찍기</h3><p>의자에 붙은 QR을 휴대폰 카메라로 찍으면 내 좌석이 자동으로 입력돼요.</p></article>
+    <article class="rv d1"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 5h18M6 5l1.5 13a2 2 0 0 0 2 2h5a2 2 0 0 0 2-2L18 5"/><path d="M9 9v7M15 9v7"/></svg></div><h3>메뉴 고르고 결제</h3><p>구장 안 매장 메뉴를 한 번에 보고, 간편결제로 바로 주문해요.</p></article>
+    <article class="rv d2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0zM15 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/><path d="M9 17h6M3 17V7h11v10M14 10h4l3 4v3h-2"/></svg></div><h3>내 자리에서 받기</h3><p>배달 기사가 좌석까지 가져다드려요. 원하면 시간 맞춰 매장 픽업도 OK.</p></article>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <p class="eyebrow rv">OPTIONS</p>
+  <h2 class="rv d1">배달할까요, 가지러 갈까요?</h2>
+  <div class="opt">
+    <div class="a rv"><b>좌석 배달</b><strong>배달비 3,000원</strong><p>자리에서 일어나지 않아도 내 좌석까지.</p></div>
+    <div class="b rv d1"><b>매장 픽업</b><strong>픽업은 무료</strong><p>원하는 시간에 맞춰 준비해 두면 바로 가져가요.</p></div>
+  </div>
+  <div class="free rv d2"><span><i>✓</i>앱 설치 없음</span><span><i>✓</i>회원가입 없음</span><span><i>✓</i>주문 상태 실시간 확인</span><span><i>✓</i>쿠폰 · 주문내역</span></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap"><div class="shop">
+  <div>
+    <p class="eyebrow rv" style="color:var(--gold)">FOR STORES</p>
+    <h2 class="rv d1">구장 매장 사장님,<br>주문은 라팍요가 모아드려요</h2>
+    <ul class="rv d2"><li>새 주문이 들어오면 매장 화면에 바로 알림</li><li>배달 기사 배정과 이동 상황까지 한눈에</li><li>정산 내역은 관리자 화면에서 확인</li></ul>
+  </div>
+  <div class="ph rv d2"><img src="../img/ball3.webp" width="1000" height="667" loading="lazy" alt="야구장 전경"></div>
+</div></div></section>
+
+<footer><div class="wrap">라팍요 · 대구삼성라이온즈파크 좌석 배달·픽업 주문 · 이 소개 페이지는 재재컴퍼니가 제작 예시로 만든 것입니다.</div></footer>
+<script src="../demo.js"></script>
+</body>
+</html>
